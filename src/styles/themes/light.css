@@ -1,0 +1,74 @@
+[data-theme="light"] {
+  --surface-base: #f8fafc;
+  --surface-card: #ffffff;
+  --surface-sidebar: #eef2ff;
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+  --border-soft: rgba(15,23,42,0.08);
+  --accent-primary: #2563eb;
+}
+
+
+/* =========================================
+   ADNA THEME-DRIVEN ENTERPRISE REFACTOR
+   ========================================= */
+
+:root {
+  --surface-base: var(--background);
+  --surface-card: var(--card);
+  --surface-sidebar: var(--sidebar);
+
+  --text-primary: var(--foreground);
+  --text-muted: var(--muted-foreground);
+
+  --border-soft: color-mix(in srgb, var(--border) 70%, transparent);
+
+  --dashboard-glow: rgba(37,99,235,0.06);
+}
+
+/* Theme-driven surfaces */
+body {
+  background: var(--surface-base);
+  color: var(--text-primary);
+}
+
+/* Unified cards */
+[data-slot="card"],
+.card,
+[class*="card"] {
+  background: var(--surface-card);
+  color: var(--text-primary);
+  border-color: var(--border-soft);
+}
+
+/* Unified sidebar */
+[data-sidebar="sidebar"] {
+  background: var(--surface-sidebar);
+  border-color: var(--border-soft);
+}
+
+/* Unified text hierarchy */
+h1,h2,h3,h4 {
+  color: var(--text-primary);
+}
+
+p,
+span,
+label {
+  color: inherit;
+}
+
+/* Unified muted content */
+.text-muted,
+[class*="muted"] {
+  color: var(--text-muted);
+}
+
+/* Charts inherit theme */
+.recharts-cartesian-grid line {
+  stroke: var(--border-soft);
+}
+
+.recharts-tooltip-wrapper {
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35));
+}

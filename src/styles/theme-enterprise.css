@@ -1,0 +1,255 @@
+:root {
+  --surface-base: var(--background-primary, #081225);
+  --surface-card: var(--surface-primary, #0f172a);
+  --surface-sidebar: var(--surface-primary, #111827);
+
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+
+  --border-soft: rgba(255,255,255,0.08);
+
+  --accent-primary: #2563eb;
+}
+
+@import "./themes/blue.css";
+@import "./themes/light.css";
+@import "./themes/premium-dark.css";
+.theme-premium-dark {
+  --background-primary: #050505;
+  --background-secondary: #090909;
+  --background-tertiary: #0d0d0d;
+
+  --surface-primary: #111111;
+  --surface-secondary: #161616;
+  --surface-tertiary: #1c1c1c;
+
+  --border-primary: #232323;
+  --border-secondary: #2e2e2e;
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #a1a1aa;
+
+  --accent-primary: #d4a017;
+  --accent-primary-soft: #f5d06f;
+
+  --accent-secondary: #2563eb;
+  --accent-secondary-soft: #3b82f6;
+
+  --accent-purple: #8b5cf6;
+  --accent-cyan: #06b6d4;
+  --accent-success: #22c55e;
+
+  --shadow-premium: 0 10px 40px rgba(0, 0, 0, 0.45);
+  --glow-gold: 0 0 24px rgba(212, 160, 23, 0.18);
+  --glow-blue: 0 0 24px rgba(37, 99, 235, 0.16);
+
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 30%),
+    radial-gradient(circle at top right, rgba(212,160,23,0.06), transparent 25%),
+    #050505;
+}
+
+.theme-classic {
+  --background-primary: #081225;
+  --surface-primary: #0f172a;
+  --accent-primary: #2563eb;
+}
+
+.theme-light {
+  --background-primary: #f8fafc;
+  --surface-primary: #ffffff;
+  --accent-primary: #1d4ed8;
+}
+
+.theme-midnight {
+  --background-primary: #111214;
+  --surface-primary: #1a1c1f;
+  --accent-primary: #eab308;
+}
+
+
+
+
+/* =========================
+   ADNA ENTERPRISE CYCLE 3
+   ========================= */
+
+[data-theme="premium-dark"] {
+  --enterprise-surface: #07090f;
+  --enterprise-card: rgba(14,18,28,0.76);
+  --enterprise-card-solid: #0f1420;
+
+  --enterprise-border: rgba(255,255,255,0.045);
+  --enterprise-border-soft: rgba(255,255,255,0.03);
+
+  --enterprise-text: #f3f6fb;
+  --enterprise-muted: #8d99ae;
+
+  --enterprise-blue: #2487ff;
+}
+
+/* Layout hierarchy */
+[data-theme="premium-dark"] body {
+  background:
+    radial-gradient(circle at top left, rgba(36,135,255,0.08), transparent 22%),
+    linear-gradient(180deg, #0a0d15 0%, #06070b 100%);
+}
+
+/* Executive sidebar */
+[data-theme="premium-dark"] [data-sidebar="sidebar"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(9,11,18,0.98) 0%,
+      rgba(6,7,12,1) 100%
+    );
+
+  border-right: 1px solid rgba(255,255,255,0.04);
+
+  backdrop-filter: blur(16px);
+}
+
+/* Data-first cards */
+[data-theme="premium-dark"] [data-slot="card"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18,22,34,0.88) 0%,
+      rgba(10,12,20,0.96) 100%
+    );
+
+  border: 1px solid rgba(255,255,255,0.045);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 24px 48px -34px rgba(0,0,0,0.92);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease;
+}
+
+[data-theme="premium-dark"] [data-slot="card"]:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(36,135,255,0.12);
+
+  box-shadow:
+    0 28px 60px -34px rgba(0,0,0,0.95),
+    0 0 0 1px rgba(36,135,255,0.04);
+}
+
+/* Typography hierarchy */
+[data-theme="premium-dark"] h1,
+[data-theme="premium-dark"] h2,
+[data-theme="premium-dark"] h3 {
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+/* Premium KPI feeling */
+[data-theme="premium-dark"] .kpi-card,
+[data-theme="premium-dark"] [class*="stats"],
+[data-theme="premium-dark"] [class*="metric"] {
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+}
+
+/* Better chrome separation */
+[data-theme="premium-dark"] header,
+[data-theme="premium-dark"] nav {
+  border-color: rgba(255,255,255,0.04);
+}
+
+/* Softer glows */
+[data-theme="premium-dark"] .recharts-curve,
+[data-theme="premium-dark"] .recharts-sector {
+  filter: drop-shadow(0 0 6px rgba(36,135,255,0.05));
+}
+
+/* Enterprise interactions */
+[data-theme="premium-dark"] button {
+  transition:
+    transform .18s ease,
+    background-color .18s ease,
+    border-color .18s ease;
+}
+
+[data-theme="premium-dark"] button:hover {
+  transform: translateY(-1px);
+}
+
+/* More breathing room */
+[data-theme="premium-dark"] main {
+  padding-bottom: 48px;
+}
+
+
+
+/* =========================================
+   ADNA THEME-DRIVEN ENTERPRISE REFACTOR
+   ========================================= */
+
+:root {
+  --surface-base: var(--background);
+  --surface-card: var(--card);
+  --surface-sidebar: var(--sidebar);
+
+  --text-primary: var(--foreground);
+  --text-muted: var(--muted-foreground);
+
+  --border-soft: color-mix(in srgb, var(--border) 70%, transparent);
+
+  --dashboard-glow: rgba(37,99,235,0.06);
+}
+
+/* Theme-driven surfaces */
+body {
+  background: var(--surface-base);
+  color: var(--text-primary);
+}
+
+/* Unified cards */
+[data-slot="card"],
+.card,
+[class*="card"] {
+  background: var(--surface-card);
+  color: var(--text-primary);
+  border-color: var(--border-soft);
+}
+
+/* Unified sidebar */
+[data-sidebar="sidebar"] {
+  background: var(--surface-sidebar);
+  border-color: var(--border-soft);
+}
+
+/* Unified text hierarchy */
+h1,h2,h3,h4 {
+  color: var(--text-primary);
+}
+
+p,
+span,
+label {
+  color: inherit;
+}
+
+/* Unified muted content */
+.text-muted,
+[class*="muted"] {
+  color: var(--text-muted);
+}
+
+/* Charts inherit theme */
+.recharts-cartesian-grid line {
+  stroke: var(--border-soft);
+}
+
+.recharts-tooltip-wrapper {
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,0.35));
+}

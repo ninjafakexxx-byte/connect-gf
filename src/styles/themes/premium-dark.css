@@ -1,0 +1,2059 @@
+[data-theme="premium-dark"] {
+  --surface-0: #050505;
+  --surface-1: #0b0b0c;
+  --surface-2: #121214;
+
+  --surface-base: var(--surface-0);
+  --surface-card: rgba(18, 18, 20, 0.94);
+  --surface-sidebar: rgba(11, 11, 12, 0.98);
+
+  --text-primary: rgba(255,255,255,0.92);
+  --text-muted: rgba(255,255,255,0.64);
+
+  --border-soft: rgba(214,168,95,0.12);
+  --border-subtle: rgba(255,255,255,0.05);
+
+  --accent-primary: #d6a85f;
+  --accent-gold: #d6a85f;
+  --accent-gold-soft: rgba(214,168,95,0.18);
+
+  --shadow-premium:
+    0 1px 0 rgba(255,255,255,0.03) inset,
+    0 18px 48px rgba(0,0,0,0.48);
+
+  background:
+    radial-gradient(circle at top right, rgba(214,168,95,0.05), transparent 22%),
+    linear-gradient(180deg, #0b0b0c 0%, #050505 100%);
+}
+
+/* Executive matte foundation */
+[data-theme="premium-dark"] body {
+  background:
+    radial-gradient(circle at top right, rgba(214,168,95,0.04), transparent 20%),
+    linear-gradient(180deg, #0b0b0c 0%, #050505 100%);
+
+  color: var(--text-primary);
+}
+
+/* Premium enterprise sidebar */
+[data-theme="premium-dark"] [data-sidebar="sidebar"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11,11,12,0.98) 0%,
+      rgba(7,7,8,1) 100%
+    );
+
+  border-right: 1px solid rgba(214,168,95,0.08);
+
+  backdrop-filter: blur(14px);
+}
+
+[data-theme="premium-dark"] [data-sidebar="menu-button"][data-active="true"] {
+  background: rgba(214,168,95,0.08);
+
+  border: 1px solid rgba(214,168,95,0.14);
+
+  color: rgba(255,255,255,0.96);
+}
+
+/* Executive card system */
+[data-theme="premium-dark"] [data-slot="card"] {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18,18,20,0.96) 0%,
+      rgba(10,10,11,0.98) 100%
+    );
+
+  border: 1px solid var(--border-soft);
+
+  border-radius: 22px;
+
+  box-shadow: var(--shadow-premium);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease,
+    background .18s ease;
+}
+
+[data-theme="premium-dark"] [data-slot="card"]:hover {
+  transform: translateY(-1px);
+
+  border-color: rgba(214,168,95,0.20);
+
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.03) inset,
+    0 24px 56px rgba(0,0,0,0.56);
+}
+
+/* KPI executive refinement */
+[data-theme="premium-dark"] .kpi-card,
+[data-theme="premium-dark"] [class*="stats"],
+[data-theme="premium-dark"] [class*="metric"] {
+  border: 1px solid rgba(214,168,95,0.10);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18,18,20,0.94),
+      rgba(12,12,13,0.98)
+    );
+
+  backdrop-filter: blur(10px);
+}
+
+/* Typography hierarchy */
+[data-theme="premium-dark"] h1,
+[data-theme="premium-dark"] h2,
+[data-theme="premium-dark"] h3 {
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+/* Executive chrome */
+[data-theme="premium-dark"] header,
+[data-theme="premium-dark"] nav {
+  border-color: rgba(214,168,95,0.08);
+}
+
+/* Analytics surfaces */
+[data-theme="premium-dark"] .analytics-surface {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(14,14,15,0.96),
+      rgba(10,10,11,0.98)
+    );
+
+  border: 1px solid rgba(255,255,255,0.04);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.38);
+}
+
+/* Charts */
+[data-theme="premium-dark"] .recharts-cartesian-grid line {
+  stroke: rgba(255,255,255,0.04);
+}
+
+[data-theme="premium-dark"] .recharts-tooltip-wrapper {
+  backdrop-filter: blur(14px);
+
+  filter: drop-shadow(0 12px 36px rgba(0,0,0,0.48));
+}
+
+[data-theme="premium-dark"] .chart-tooltip {
+  background: rgba(10,10,11,0.96);
+
+  border: 1px solid rgba(214,168,95,0.12);
+}
+
+[data-theme="premium-dark"] .recharts-curve,
+[data-theme="premium-dark"] .recharts-sector {
+  filter: drop-shadow(0 0 6px rgba(214,168,95,0.05));
+}
+
+/* Enterprise interactions */
+[data-theme="premium-dark"] button,
+[data-theme="premium-dark"] input {
+  transition:
+    transform .18s ease,
+    background-color .18s ease,
+    border-color .18s ease;
+}
+
+[data-theme="premium-dark"] button:hover {
+  transform: translateY(-1px);
+}
+
+/* Layout breathing */
+[data-theme="premium-dark"] main {
+  padding-bottom: 48px;
+}
+
+/* =========================================================
+   OBSIDIAN GOLD EXECUTIVE — KPI REFINEMENT
+   Scope: premium-dark only. Neutralizes the blue/white
+   decorative overlays baked into StatCard so they read as
+   matte executive surfaces instead of saturated SaaS cards.
+   ========================================================= */
+
+/* Kill inline gradient + glow coming from StatCard variants */
+[data-theme="premium-dark"] .kpi-card {
+  background-image: none !important;
+  background:
+    linear-gradient(180deg, rgba(20,20,22,0.98) 0%, rgba(10,10,11,1) 100%) !important;
+  border: 1px solid rgba(214,168,95,0.10) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.035),
+    0 1px 0 rgba(0,0,0,0.6),
+    0 24px 64px -28px rgba(0,0,0,0.95) !important;
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    box-shadow .22s ease !important;
+}
+
+/* Soft gold edge lighting */
+[data-theme="premium-dark"] .kpi-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    radial-gradient(120% 60% at 0% 0%, rgba(214,168,95,0.07), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent 35%);
+  mix-blend-mode: screen;
+  opacity: .9;
+}
+
+/* Remove the saturated/white overlay divs StatCard injects.
+   The content wrapper uses `relative`; every other direct
+   child is a decorative `absolute` overlay we want gone. */
+[data-theme="premium-dark"] .kpi-card > div.absolute,
+[data-theme="premium-dark"] .kpi-card > .absolute {
+  display: none !important;
+}
+
+[data-theme="premium-dark"] .kpi-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(214,168,95,0.22) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    0 32px 80px -32px rgba(0,0,0,0.98),
+    0 0 0 1px rgba(214,168,95,0.08) !important;
+}
+
+/* Icon tile — matte obsidian with thin gold rim */
+[data-theme="premium-dark"] .kpi-card .relative > div:first-child {
+  background: linear-gradient(180deg, rgba(22,22,24,0.95), rgba(12,12,13,0.95)) !important;
+  border: 1px solid rgba(214,168,95,0.14) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.04),
+    0 6px 18px rgba(0,0,0,0.5) !important;
+  color: var(--accent-gold);
+}
+
+[data-theme="premium-dark"] .kpi-card .relative > div:first-child svg {
+  color: var(--accent-gold);
+  stroke: var(--accent-gold);
+  filter: drop-shadow(0 0 6px rgba(214,168,95,0.18));
+}
+
+/* Title — quiet, institutional */
+[data-theme="premium-dark"] .kpi-card p {
+  color: rgba(255,255,255,0.55) !important;
+  letter-spacing: 0.22em;
+}
+
+/* Value — silent luxury */
+[data-theme="premium-dark"] .kpi-card span.text-3xl,
+[data-theme="premium-dark"] .kpi-card span.sm\:text-4xl {
+  color: rgba(255,255,255,0.96) !important;
+  text-shadow: none !important;
+  font-weight: 600;
+}
+
+/* Delta pill — gold ghost chip instead of bright white */
+[data-theme="premium-dark"] .kpi-card .rounded-full {
+  background: rgba(214,168,95,0.10) !important;
+  color: rgba(214,168,95,0.92) !important;
+  border: 1px solid rgba(214,168,95,0.18);
+}
+
+/* =========================================================
+   Sidebar — quiet architectural feedback
+   ========================================================= */
+[data-theme="premium-dark"] [data-sidebar="menu-button"]:hover {
+  background: rgba(214,168,95,0.05);
+  color: rgba(255,255,255,0.96);
+}
+
+[data-theme="premium-dark"] [data-sidebar="menu-button"][data-active="true"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--accent-gold), transparent);
+  border-radius: 2px;
+}
+
+/* =========================================================
+   Motion — subtle, opacity-driven, no bounce
+   ========================================================= */
+[data-theme="premium-dark"] button:hover {
+  transform: none;
+}
+[data-theme="premium-dark"] [data-slot="card"]:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   CYCLE 3 — EXECUTIVE RECOMPOSITION
+   Visually re-skin hero, KPI density, tabs, charts, sidebar
+   so Premium Dark stops reading as "Blue in dark mode" and
+   feels like a different, institutional product. CSS only —
+   no layout/markup changes.
+   ========================================================= */
+
+/* --- HERO: kill blue/red blur orbs + blue gradient title --- */
+[data-theme="premium-dark"] .relative.overflow-hidden.rounded-3xl > div.absolute.rounded-full {
+  display: none !important;
+}
+[data-theme="premium-dark"] .relative.overflow-hidden.rounded-3xl.border.bg-gradient-to-br {
+  background:
+    linear-gradient(135deg, rgba(16,16,18,0.98) 0%, rgba(8,8,9,1) 60%, rgba(10,10,11,1) 100%) !important;
+  border: 1px solid rgba(214,168,95,0.10) !important;
+  border-radius: 18px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 30px 80px -40px rgba(0,0,0,0.9) !important;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+/* Cinematic ambient gold sheen + soft vignette */
+[data-theme="premium-dark"] .relative.overflow-hidden.rounded-3xl.border.bg-gradient-to-br::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(80% 60% at 100% 0%, rgba(214,168,95,0.10), transparent 55%),
+    radial-gradient(60% 50% at 0% 100%, rgba(214,168,95,0.04), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.025), transparent 30%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 0;
+}
+/* Thin gold institutional rule on top edge */
+[data-theme="premium-dark"] .relative.overflow-hidden.rounded-3xl.border.bg-gradient-to-br::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 24px; right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214,168,95,0.55), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Replace blue-gradient headline with executive cream/gold */
+[data-theme="premium-dark"] h1 span.bg-gradient-to-r,
+[data-theme="premium-dark"] h1 span.bg-clip-text {
+  background: linear-gradient(180deg, #f4ead3 0%, #d6a85f 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  filter: none !important;
+  text-shadow: none !important;
+  letter-spacing: -0.025em;
+}
+
+/* Hero subtitle (amber gradient strip) — quiet it down */
+[data-theme="premium-dark"] p.bg-gradient-to-r.bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: rgba(214,168,95,0.78) !important;
+  color: rgba(214,168,95,0.78) !important;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+/* Welcome chip — matte institutional pill */
+[data-theme="premium-dark"] .inline-flex.rounded-full.border.border-amber-400\/20 {
+  background: rgba(214,168,95,0.06) !important;
+  border: 1px solid rgba(214,168,95,0.22) !important;
+  color: rgba(214,168,95,0.92) !important;
+  box-shadow: none !important;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+}
+
+/* --- TAB SWITCHER: kill blue pill, use gold underline bar --- */
+[data-theme="premium-dark"] [data-layoutid] ,
+[data-theme="premium-dark"] span.absolute.inset-0.rounded-xl.bg-gradient-to-r {
+  background: rgba(214,168,95,0.08) !important;
+  box-shadow:
+    inset 0 -2px 0 var(--accent-gold),
+    inset 0 1px 0 rgba(255,255,255,0.04) !important;
+  border-radius: 10px !important;
+  filter: none !important;
+}
+
+/* --- KPI CARDS: denser, flatter, executive --- */
+[data-theme="premium-dark"] .kpi-card {
+  border-radius: 14px !important;
+  padding: 1.1rem 1.25rem !important;
+}
+[data-theme="premium-dark"] .kpi-card .relative > div:first-child {
+  border-radius: 10px !important;
+  width: 38px !important;
+  height: 38px !important;
+}
+[data-theme="premium-dark"] .kpi-card .relative > div:first-child svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+[data-theme="premium-dark"] .kpi-card p {
+  font-size: 10.5px !important;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+[data-theme="premium-dark"] .kpi-card span.text-3xl,
+[data-theme="premium-dark"] .kpi-card span.sm\:text-4xl {
+  font-size: 1.85rem !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.035em;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+/* Thin gold baseline rule across each KPI card */
+[data-theme="premium-dark"] .kpi-card::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(214,168,95,0.35), transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+[data-theme="premium-dark"] .kpi-card .rounded-full {
+  font-size: 10px !important;
+  padding: 2px 8px !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* =========================================================
+   CYCLE 4 — KPI EXECUTIVE INTELLIGENCE PANEL
+   Recompose KPI cards as institutional analytics modules:
+   integrated material, editorial hierarchy, secondary icon,
+   authoritative numeric, vertical divider rhythm between
+   adjacent cards so they read as a SINGLE PANEL, not widgets.
+   Premium-dark only. CSS-only.
+   ========================================================= */
+
+/* Treat the KPI grid as one continuous executive surface */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) {
+  gap: 0 !important;
+  border: 1px solid rgba(214,168,95,0.10);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(16,16,18,0.96) 0%, rgba(9,9,10,0.98) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 30px 80px -40px rgba(0,0,0,0.95);
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+}
+
+/* Cinematic ambient sheen over the whole panel */
+[data-theme="premium-dark"] .grid:has(> .kpi-card)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 80% at 100% 0%, rgba(214,168,95,0.05), transparent 60%),
+    radial-gradient(40% 60% at 0% 100%, rgba(214,168,95,0.025), transparent 60%);
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+
+/* Each KPI card: dissolve into the panel — no border, no radius, no shadow */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 1.35rem 1.6rem 1.4rem !important;
+  position: relative;
+  z-index: 1;
+  transform: none !important;
+  transition: background-color .25s ease !important;
+}
+
+/* Hairline vertical rule between cards — institutional rhythm */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card + .kpi-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 18%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(214,168,95,0.18), transparent);
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: normal;
+  display: block;
+  border-radius: 0;
+}
+
+/* Hide the per-card gold baseline rule (it now lives on the panel) */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card::before {
+  display: none !important;
+}
+
+/* Kill the per-card edge-light overlay inside the panel */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card > .absolute,
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card > div.absolute {
+  display: none !important;
+}
+
+/* Quiet hover — material warms, no lift */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card:hover {
+  background: rgba(214,168,95,0.025) !important;
+}
+
+/* --- Editorial hierarchy inside each cell --- */
+
+/* Stack: icon shrinks, becomes secondary; content takes lead */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card .relative {
+  gap: 0 !important;
+  display: block !important;
+}
+
+/* Icon: secondary, integrated chip in the corner */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card .relative > div:first-child {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 6px !important;
+  background: rgba(214,168,95,0.04) !important;
+  border: 1px solid rgba(214,168,95,0.10) !important;
+  box-shadow: none !important;
+  opacity: 0.7;
+}
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card .relative > div:first-child svg {
+  width: 13px !important;
+  height: 13px !important;
+  filter: none !important;
+  color: rgba(214,168,95,0.75) !important;
+  stroke: rgba(214,168,95,0.75) !important;
+}
+
+/* Eyebrow label: institutional, ultra-quiet */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card p {
+  font-size: 9.5px !important;
+  letter-spacing: 0.28em !important;
+  color: rgba(255,255,255,0.42) !important;
+  font-weight: 600 !important;
+  margin: 0 0 14px 0 !important;
+  padding-right: 40px;
+}
+
+/* Metric: authoritative, financial, data-centric */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card .relative > div:last-child > div {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  margin-top: 0 !important;
+}
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card span.text-3xl,
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card span.sm\:text-4xl {
+  font-size: 2.35rem !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.04em !important;
+  color: rgba(245,240,225,0.97) !important;
+  font-feature-settings: "tnum" 1, "lnum" 1, "ss01" 1;
+}
+
+/* Delta pill: small, ghost gold, sits under metric */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card .rounded-full {
+  background: transparent !important;
+  border: 1px solid rgba(214,168,95,0.22) !important;
+  color: rgba(214,168,95,0.85) !important;
+  font-size: 9.5px !important;
+  padding: 2px 7px !important;
+  letter-spacing: 0.10em !important;
+  font-weight: 500 !important;
+  border-radius: 3px !important;
+}
+
+/* --- CARDS GENERAL: tighter executive radius --- */
+[data-theme="premium-dark"] [data-slot="card"] {
+  border-radius: 14px !important;
+}
+
+/* --- SIDEBAR: architectural composition --- */
+[data-theme="premium-dark"] [data-sidebar="menu-button"] {
+  border-radius: 8px !important;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding-left: 14px !important;
+}
+[data-theme="premium-dark"] [data-sidebar="group-label"] {
+  text-transform: uppercase !important;
+  letter-spacing: 0.22em !important;
+  font-size: 10px !important;
+  color: rgba(214,168,95,0.55) !important;
+  font-weight: 600 !important;
+}
+[data-theme="premium-dark"] [data-sidebar="separator"] {
+  background: linear-gradient(90deg, transparent, rgba(214,168,95,0.18), transparent) !important;
+  height: 1px !important;
+}
+
+/* --- CHARTS: Bloomberg / Stripe-Radar tonality --- */
+[data-theme="premium-dark"] .recharts-cartesian-grid line {
+  stroke: rgba(214,168,95,0.06) !important;
+  stroke-dasharray: 2 4 !important;
+}
+[data-theme="premium-dark"] .recharts-text {
+  fill: rgba(255,255,255,0.45) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* Recolor SVG gradient stops used by bar/area fills */
+[data-theme="premium-dark"] linearGradient[id^="g"] stop:first-child {
+  stop-color: #d6a85f !important;
+  stop-opacity: 0.85 !important;
+}
+[data-theme="premium-dark"] linearGradient[id^="g"] stop:last-child {
+  stop-color: #d6a85f !important;
+  stop-opacity: 0.04 !important;
+}
+/* Line/area strokes – thin, gold */
+[data-theme="premium-dark"] .recharts-area-curve,
+[data-theme="premium-dark"] .recharts-line-curve {
+  stroke: #d6a85f !important;
+  stroke-width: 1.25px !important;
+  filter: drop-shadow(0 0 8px rgba(214,168,95,0.18));
+}
+[data-theme="premium-dark"] .recharts-bar-rectangle path {
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.6));
+}
+[data-theme="premium-dark"] .recharts-default-tooltip {
+  background: rgba(10,10,11,0.96) !important;
+  border: 1px solid rgba(214,168,95,0.22) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.7) !important;
+}
+[data-theme="premium-dark"] .recharts-tooltip-cursor {
+  fill: rgba(214,168,95,0.06) !important;
+}
+[data-theme="premium-dark"] .recharts-legend-item-text {
+  color: rgba(255,255,255,0.55) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* --- TYPOGRAPHY: institutional eyebrows everywhere --- */
+[data-theme="premium-dark"] [data-slot="card"] [class*="text-xs"][class*="uppercase"],
+[data-theme="premium-dark"] [data-slot="card-title"] {
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+/* --- FILTER BAR: matte chips --- */
+[data-theme="premium-dark"] select,
+[data-theme="premium-dark"] input[type="text"],
+[data-theme="premium-dark"] input[type="search"] {
+  background: rgba(14,14,15,0.85) !important;
+  border: 1px solid rgba(214,168,95,0.10) !important;
+  border-radius: 8px !important;
+}
+
+/* =========================================================
+   CYCLE 5 — OBSIDIAN GOLD: PERCEPTUAL ARCHITECTURE
+   Shift Premium Dark from "polished dark SaaS" into an
+   executive operational terminal. Pure CSS, dark-only.
+   Goals: institutional density, editorial rhythm,
+   architectural restraint, ledger typography.
+   ========================================================= */
+
+/* --- 5.1 Global rhythm: dense, architectural, ledger-grade --- */
+[data-theme="premium-dark"] {
+  --exec-rule:      rgba(214,168,95,0.10);
+  --exec-rule-hi:   rgba(214,168,95,0.22);
+  --exec-ink:       rgba(245,240,225,0.96);
+  --exec-ink-quiet: rgba(245,240,225,0.55);
+  --exec-ink-mute:  rgba(245,240,225,0.34);
+  --exec-mono:      ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  font-feature-settings: "ss01" 1, "cv11" 1, "tnum" 1, "lnum" 1;
+}
+
+[data-theme="premium-dark"] body {
+  background:
+    radial-gradient(900px 480px at 88% -10%, rgba(214,168,95,0.05), transparent 60%),
+    linear-gradient(180deg, #08080a 0%, #050506 100%) !important;
+  font-feature-settings: "ss01" 1, "tnum" 1, "lnum" 1;
+}
+
+/* Compress page padding — operational not airy */
+[data-theme="premium-dark"] main {
+  padding-top: 18px !important;
+  padding-bottom: 32px !important;
+}
+
+/* All numbers behave as ledger figures */
+[data-theme="premium-dark"] .kpi-card span,
+[data-theme="premium-dark"] td,
+[data-theme="premium-dark"] th,
+[data-theme="premium-dark"] .recharts-text,
+[data-theme="premium-dark"] .recharts-legend-item-text {
+  font-variant-numeric: tabular-nums lining-nums !important;
+}
+
+/* --- 5.2 Card system: hairline, sharp, no lift --- */
+[data-theme="premium-dark"] [data-slot="card"] {
+  border-radius: 10px !important;
+  border: 1px solid var(--exec-rule) !important;
+  background: linear-gradient(180deg, rgba(14,14,16,0.96), rgba(8,8,10,0.98)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.025),
+    0 18px 50px -30px rgba(0,0,0,0.95) !important;
+  backdrop-filter: none !important;
+  transition: border-color .18s ease, background-color .18s ease !important;
+}
+[data-theme="premium-dark"] [data-slot="card"]:hover {
+  transform: none !important;
+  border-color: var(--exec-rule-hi) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 22px 60px -32px rgba(0,0,0,0.98) !important;
+}
+
+/* Card titles: institutional eyebrow, not headline */
+[data-theme="premium-dark"] [data-slot="card-header"] {
+  padding: 14px 18px 10px !important;
+  border-bottom: 1px solid rgba(214,168,95,0.06) !important;
+}
+[data-theme="premium-dark"] [data-slot="card-title"] {
+  font-size: 11px !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: rgba(214,168,95,0.78) !important;
+  font-weight: 600 !important;
+}
+[data-theme="premium-dark"] [data-slot="card-description"] {
+  font-size: 11px !important;
+  color: var(--exec-ink-mute) !important;
+  letter-spacing: 0.02em !important;
+}
+[data-theme="premium-dark"] [data-slot="card-content"] {
+  padding: 14px 18px 16px !important;
+}
+
+/* --- 5.3 Hero: command layer, not marketing --- */
+[data-theme="premium-dark"] .relative.overflow-hidden.rounded-3xl.border.bg-gradient-to-br {
+  border-radius: 10px !important;
+  padding: 18px 22px !important;
+  background:
+    linear-gradient(180deg, rgba(12,12,14,0.98) 0%, rgba(7,7,9,1) 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.025),
+    0 24px 70px -40px rgba(0,0,0,0.95) !important;
+}
+[data-theme="premium-dark"] .relative.overflow-hidden.rounded-3xl.border.bg-gradient-to-br h1 {
+  font-size: 1.55rem !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 500 !important;
+}
+[data-theme="premium-dark"] .relative.overflow-hidden.rounded-3xl.border.bg-gradient-to-br p {
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+  color: var(--exec-ink-quiet) !important;
+}
+/* Hero baseline — institutional rule across full width */
+[data-theme="premium-dark"] .relative.overflow-hidden.rounded-3xl.border.bg-gradient-to-br::after {
+  top: auto !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, rgba(214,168,95,0.32), transparent) !important;
+}
+
+/* --- 5.4 KPI panel: editorial asymmetry, sub-meta --- */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) {
+  border-radius: 10px !important;
+  border-color: var(--exec-rule) !important;
+  background: linear-gradient(180deg, rgba(12,12,14,0.96), rgba(7,7,9,0.98)) !important;
+}
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card {
+  padding: 18px 22px 20px !important;
+}
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card p {
+  font-size: 9px !important;
+  letter-spacing: 0.34em !important;
+  font-weight: 600 !important;
+  color: var(--exec-ink-mute) !important;
+  margin-bottom: 18px !important;
+}
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card span.text-3xl,
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card span.sm\:text-4xl {
+  font-size: 2.1rem !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.045em !important;
+  color: var(--exec-ink) !important;
+}
+/* Delta becomes a tiny ledger tag */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card .rounded-full {
+  border-radius: 2px !important;
+  font-family: var(--exec-mono) !important;
+  font-size: 9px !important;
+  letter-spacing: 0.08em !important;
+  padding: 2px 6px !important;
+  border-color: rgba(214,168,95,0.22) !important;
+  color: rgba(214,168,95,0.85) !important;
+}
+/* Hairline rule between cards — sharper */
+[data-theme="premium-dark"] .grid:has(> .kpi-card) > .kpi-card + .kpi-card::after {
+  top: 22% !important;
+  bottom: 22% !important;
+  background: linear-gradient(180deg, transparent, rgba(214,168,95,0.22), transparent) !important;
+}
+
+/* --- 5.5 Tables: dense executive ledger --- */
+[data-theme="premium-dark"] table {
+  font-size: 12.5px !important;
+  font-variant-numeric: tabular-nums lining-nums !important;
+}
+[data-theme="premium-dark"] thead th {
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+  color: rgba(214,168,95,0.62) !important;
+  font-weight: 600 !important;
+  padding: 8px 12px !important;
+  border-bottom: 1px solid rgba(214,168,95,0.14) !important;
+  background: transparent !important;
+}
+[data-theme="premium-dark"] tbody td {
+  padding: 9px 12px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.035) !important;
+  color: var(--exec-ink) !important;
+}
+[data-theme="premium-dark"] tbody tr:hover td {
+  background: rgba(214,168,95,0.025) !important;
+}
+
+/* --- 5.6 Sidebar: architectural restraint --- */
+[data-theme="premium-dark"] [data-sidebar="sidebar"] {
+  backdrop-filter: none !important;
+  border-right: 1px solid rgba(214,168,95,0.08) !important;
+}
+[data-theme="premium-dark"] [data-sidebar="group"] {
+  padding: 6px 10px !important;
+}
+[data-theme="premium-dark"] [data-sidebar="group-label"] {
+  font-family: var(--exec-mono) !important;
+  font-size: 9px !important;
+  letter-spacing: 0.32em !important;
+  color: rgba(214,168,95,0.5) !important;
+  padding: 14px 10px 6px !important;
+}
+[data-theme="premium-dark"] [data-sidebar="menu-button"] {
+  font-size: 12.5px !important;
+  letter-spacing: 0.005em !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+  border-radius: 6px !important;
+  color: rgba(245,240,225,0.78) !important;
+}
+[data-theme="premium-dark"] [data-sidebar="menu-button"] svg {
+  width: 14px !important;
+  height: 14px !important;
+  opacity: 0.72;
+}
+[data-theme="premium-dark"] [data-sidebar="menu-button"][data-active="true"] {
+  background: rgba(214,168,95,0.06) !important;
+  border: 1px solid rgba(214,168,95,0.16) !important;
+  color: var(--exec-ink) !important;
+}
+[data-theme="premium-dark"] [data-sidebar="menu-button"][data-active="true"] svg {
+  color: var(--accent-gold) !important;
+  opacity: 1;
+}
+
+/* --- 5.7 Buttons / inputs: matte chips, sharp corners --- */
+[data-theme="premium-dark"] button {
+  border-radius: 6px !important;
+  transition: background-color .15s ease, border-color .15s ease, opacity .15s ease !important;
+}
+[data-theme="premium-dark"] button:hover {
+  transform: none !important;
+  opacity: 0.92;
+}
+[data-theme="premium-dark"] input,
+[data-theme="premium-dark"] select,
+[data-theme="premium-dark"] textarea {
+  border-radius: 6px !important;
+  font-size: 12.5px !important;
+  background: rgba(10,10,12,0.85) !important;
+  border: 1px solid rgba(214,168,95,0.10) !important;
+  color: var(--exec-ink) !important;
+}
+[data-theme="premium-dark"] input:focus-visible,
+[data-theme="premium-dark"] select:focus-visible,
+[data-theme="premium-dark"] textarea:focus-visible {
+  border-color: rgba(214,168,95,0.45) !important;
+  box-shadow: 0 0 0 3px rgba(214,168,95,0.08) !important;
+  outline: none !important;
+}
+
+/* --- 5.8 Badges / pills: ledger tags --- */
+[data-theme="premium-dark"] [data-slot="badge"] {
+  border-radius: 2px !important;
+  font-family: var(--exec-mono) !important;
+  font-size: 9.5px !important;
+  letter-spacing: 0.10em !important;
+  text-transform: uppercase !important;
+  padding: 2px 7px !important;
+  font-weight: 500 !important;
+}
+
+/* --- 5.9 Charts: terminal-grade --- */
+[data-theme="premium-dark"] .recharts-cartesian-axis-tick text,
+[data-theme="premium-dark"] .recharts-text {
+  font-family: var(--exec-mono) !important;
+  font-size: 9.5px !important;
+  letter-spacing: 0.12em !important;
+  fill: rgba(214,168,95,0.55) !important;
+}
+[data-theme="premium-dark"] .recharts-cartesian-grid line {
+  stroke: rgba(214,168,95,0.045) !important;
+  stroke-dasharray: 1 5 !important;
+}
+[data-theme="premium-dark"] .recharts-cartesian-axis-line {
+  stroke: rgba(214,168,95,0.18) !important;
+}
+[data-theme="premium-dark"] .recharts-area-curve,
+[data-theme="premium-dark"] .recharts-line-curve {
+  stroke-width: 1px !important;
+  filter: none !important;
+}
+[data-theme="premium-dark"] .recharts-bar-rectangle path {
+  filter: none !important;
+}
+[data-theme="premium-dark"] .recharts-active-dot circle {
+  stroke: var(--accent-gold) !important;
+  fill: rgba(10,10,11,1) !important;
+  stroke-width: 1.25px !important;
+  r: 3 !important;
+}
+
+/* --- 5.10 Header / topbar: command layer --- */
+[data-theme="premium-dark"] header {
+  background: rgba(7,7,9,0.92) !important;
+  border-bottom: 1px solid rgba(214,168,95,0.08) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* --- 5.11 Suppress decorative noise --- */
+[data-theme="premium-dark"] .blur-2xl,
+[data-theme="premium-dark"] .blur-3xl {
+  display: none !important;
+}
+[data-theme="premium-dark"] [class*="animate-pulse"] {
+  animation: none !important;
+  opacity: 0.78 !important;
+}
+
+/* --- 5.12 Scrollbar: hairline gold --- */
+[data-theme="premium-dark"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+[data-theme="premium-dark"] ::-webkit-scrollbar-track {
+  background: transparent;
+}
+[data-theme="premium-dark"] ::-webkit-scrollbar-thumb {
+  background: rgba(214,168,95,0.14);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  border-radius: 999px;
+}
+[data-theme="premium-dark"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(214,168,95,0.28);
+  background-clip: padding-box;
+}
+
+/* --- 5.13 Focus rings: institutional, not flashy --- */
+[data-theme="premium-dark"] *:focus-visible {
+  outline: 1px solid rgba(214,168,95,0.55) !important;
+  outline-offset: 1px !important;
+}
+
+/* --- 5.14 Selection: subtle gold wash --- */
+[data-theme="premium-dark"] ::selection {
+  background: rgba(214,168,95,0.22);
+  color: #fff;
+}
+
+/* ============================================================
+   6. PRESENCE PIE / DONUT — institutional telemetry
+   Stripe Radar / Bloomberg-style monochromatic gold-on-obsidian.
+   Scope: [data-theme="premium-dark"] only.
+   ============================================================ */
+
+[data-theme="premium-dark"] [data-chart="presence-pie"] {
+  background:
+    linear-gradient(180deg, rgba(14,14,16,0.96) 0%, rgba(7,7,8,0.98) 100%);
+  border: 1px solid rgba(214,168,95,0.10);
+  border-radius: 18px;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.02) inset,
+    0 18px 44px rgba(0,0,0,0.55);
+  padding: 22px 24px;
+}
+
+[data-theme="premium-dark"] [data-chart="presence-pie"] h3 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.62);
+}
+
+[data-theme="premium-dark"] [data-chart="presence-pie"] h3 + p {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.32);
+  margin-top: 2px;
+}
+
+/* Monochromatic gold/ash palette — override Recharts inline fills */
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-pie-sector:nth-of-type(1) path {
+  fill: #d6a85f !important;
+}
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-pie-sector:nth-of-type(2) path {
+  fill: rgba(255,255,255,0.16) !important;
+}
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-pie-sector:nth-of-type(3) path {
+  fill: rgba(214,168,95,0.42) !important;
+}
+
+/* Thin separators between segments — matte obsidian center */
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-pie path {
+  stroke: #050505 !important;
+  stroke-width: 2 !important;
+  filter: none !important;
+}
+
+/* Center value: tabular, restrained, institutional */
+[data-theme="premium-dark"] [data-chart="presence-pie"] .absolute span:first-child {
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.94);
+}
+[data-theme="premium-dark"] [data-chart="presence-pie"] .absolute span:last-child {
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.34);
+  margin-top: 4px;
+}
+
+/* Editorial legend */
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-legend-wrapper {
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+}
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-legend-item-text {
+  color: rgba(255,255,255,0.56) !important;
+  font-size: 10.5px !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-legend-item svg path {
+  fill: currentColor !important;
+}
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-legend-item:nth-child(1) {
+  color: #d6a85f !important;
+}
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-legend-item:nth-child(2) {
+  color: rgba(255,255,255,0.42) !important;
+}
+
+/* Quiet tooltip */
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-default-tooltip {
+  background: rgba(8,8,9,0.96) !important;
+  border: 1px solid rgba(214,168,95,0.18) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.6) !important;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+  font-size: 11px !important;
+  padding: 8px 12px !important;
+}
+
+/* ============================================================
+   7. LATEST REPORTS — executive operational ledger
+   Compliance feed / institutional reporting console.
+   Scope: [data-theme="premium-dark"] only.
+   ============================================================ */
+
+[data-theme="premium-dark"] [data-section="latest-reports"] {
+  background:
+    linear-gradient(180deg, rgba(14,14,16,0.96) 0%, rgba(7,7,8,0.98) 100%);
+  border: 1px solid rgba(214,168,95,0.10);
+  border-radius: 18px;
+  padding: 0;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.02) inset,
+    0 18px 44px rgba(0,0,0,0.55);
+}
+
+[data-theme="premium-dark"] [data-section="latest-reports"] > h3 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.60);
+  padding: 18px 22px 14px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+[data-theme="premium-dark"] [data-section="latest-reports"] > h3::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #d6a85f;
+  border-radius: 0;
+}
+[data-theme="premium-dark"] [data-section="latest-reports"] > h3::after {
+  content: "LEDGER";
+  margin-left: auto;
+  font-size: 9.5px;
+  letter-spacing: 0.28em;
+  color: rgba(214,168,95,0.55);
+  font-weight: 500;
+}
+
+/* Empty state */
+[data-theme="premium-dark"] [data-section="latest-reports"] > p {
+  padding: 32px 22px;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.32);
+  text-align: center;
+  margin: 0;
+}
+
+/* Convert the card grid into a dense operational ledger */
+[data-theme="premium-dark"] [data-section="latest-reports"] > div {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button {
+  display: grid;
+  grid-template-columns: 14px 1fr auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 22px;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  border-radius: 0 !important;
+  transform: none !important;
+  box-shadow: none !important;
+  transition: background 140ms ease, border-color 140ms ease;
+  position: relative;
+}
+
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button:last-child {
+  border-bottom: 0 !important;
+}
+
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: rgba(214,168,95,0.55);
+  border-radius: 0;
+  justify-self: start;
+}
+
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button:hover {
+  background: rgba(214,168,95,0.04) !important;
+  transform: none !important;
+}
+
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button[aria-pressed="true"] {
+  background: rgba(214,168,95,0.06) !important;
+}
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button[aria-pressed="true"]::before {
+  background: #d6a85f;
+  box-shadow: 0 0 8px rgba(214,168,95,0.6);
+}
+
+/* Hide the gradient header strip entirely */
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button > div:first-child {
+  background: none !important;
+  background-image: none !important;
+  padding: 0 !important;
+  color: rgba(255,255,255,0.86) !important;
+  display: contents;
+}
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button > div:first-child > div {
+  display: none !important;
+}
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button > div:first-child > span {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.88) !important;
+  text-transform: none;
+  grid-column: 2;
+}
+
+/* Body: kill the icon chip, expose tabular value + meta inline */
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button > div:last-child {
+  display: contents !important;
+  padding: 0 !important;
+}
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button > div:last-child > div:first-child {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button > div:last-child > div:first-child > div {
+  display: none !important;
+}
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button > div:last-child > div:first-child > span {
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+  font-variant-numeric: tabular-nums;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  color: #d6a85f !important;
+  letter-spacing: 0.01em;
+}
+
+[data-theme="premium-dark"] [data-section="latest-reports"] > div > button > div:last-child > div:last-child {
+  grid-column: 4;
+  display: flex;
+  gap: 16px;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+  font-variant-numeric: tabular-nums;
+  font-size: 10.5px !important;
+  color: rgba(255,255,255,0.42) !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   8. SYSTEM-WIDE PREMIUM DARK UNIFICATION
+   Scope: [data-theme="premium-dark"] only.
+   Targets: tables, toolbars, page headers, badges, buttons,
+   selects, inputs, pagination, empty states.
+   No structural / Blue-theme impact.
+   ============================================================ */
+
+/* --- Page header — institutional eyebrow rule, restrained --- */
+[data-theme="premium-dark"] header.flex,
+[data-theme="premium-dark"] [data-component="page-header"] {
+  position: relative;
+  padding-bottom: 18px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+[data-theme="premium-dark"] [data-component="page-header"]::after,
+[data-theme="premium-dark"] header.flex::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -1px;
+  width: 64px; height: 1px;
+  background: linear-gradient(90deg, rgba(214,168,95,0.6), transparent);
+}
+[data-theme="premium-dark"] h1,
+[data-theme="premium-dark"] h2 {
+  letter-spacing: -0.022em;
+}
+[data-theme="premium-dark"] h1 {
+  font-weight: 600;
+}
+
+/* --- Decorative icon tiles inside PageHeader — flatten to matte --- */
+[data-theme="premium-dark"] header .bg-gradient-to-br,
+[data-theme="premium-dark"] [data-component="page-header"] .bg-gradient-to-br {
+  background: linear-gradient(180deg, rgba(22,22,24,0.95), rgba(12,12,13,0.95)) !important;
+  border: 1px solid rgba(214,168,95,0.18) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04) !important;
+  color: #d6a85f !important;
+  border-radius: 10px !important;
+}
+[data-theme="premium-dark"] header .bg-gradient-to-br svg,
+[data-theme="premium-dark"] [data-component="page-header"] .bg-gradient-to-br svg {
+  color: #d6a85f !important;
+}
+
+/* --- Primary action buttons (gradient pills) → institutional gold --- */
+[data-theme="premium-dark"] button.bg-gradient-to-r,
+[data-theme="premium-dark"] a.bg-gradient-to-r {
+  background: linear-gradient(180deg, rgba(214,168,95,0.18), rgba(214,168,95,0.08)) !important;
+  border: 1px solid rgba(214,168,95,0.32) !important;
+  color: rgba(255,245,225,0.96) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 6px 18px -8px rgba(214,168,95,0.35) !important;
+  text-shadow: none !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em;
+  border-radius: 10px !important;
+  transform: none !important;
+}
+[data-theme="premium-dark"] button.bg-gradient-to-r:hover,
+[data-theme="premium-dark"] a.bg-gradient-to-r:hover {
+  background: linear-gradient(180deg, rgba(214,168,95,0.26), rgba(214,168,95,0.12)) !important;
+  border-color: rgba(214,168,95,0.5) !important;
+  transform: none !important;
+}
+
+/* ============================================================
+   TABLES — executive institutional ledger
+   Applies broadly to any <table> inside premium-dark + the
+   DataTable wrapper variants.
+   ============================================================ */
+
+[data-theme="premium-dark"] table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+/* DataTable / ad-hoc table wrappers */
+[data-theme="premium-dark"] .rounded-2xl.border.bg-card\/60,
+[data-theme="premium-dark"] .overflow-hidden.rounded-2xl.border {
+  border-radius: 14px !important;
+  border: 1px solid rgba(214,168,95,0.10) !important;
+  background:
+    linear-gradient(180deg, rgba(14,14,15,0.98) 0%, rgba(8,8,9,0.99) 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.025),
+    0 18px 44px -22px rgba(0,0,0,0.85) !important;
+  backdrop-filter: none !important;
+}
+
+/* Table header — uppercase, hairline, gold-quiet */
+[data-theme="premium-dark"] thead tr {
+  background:
+    linear-gradient(180deg, rgba(22,22,24,0.6), rgba(14,14,16,0.4)) !important;
+  border-bottom: 1px solid rgba(214,168,95,0.18) !important;
+}
+[data-theme="premium-dark"] thead th {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase;
+  color: rgba(214,168,95,0.72) !important;
+  padding: 11px 16px !important;
+  text-align: left;
+  border: 0 !important;
+}
+[data-theme="premium-dark"] thead th button {
+  color: rgba(214,168,95,0.72) !important;
+  transform: none !important;
+}
+[data-theme="premium-dark"] thead th button:hover {
+  color: #d6a85f !important;
+}
+
+/* Body rows — dense, hairline, quiet hover */
+[data-theme="premium-dark"] tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  transition: background 140ms ease;
+}
+[data-theme="premium-dark"] tbody tr:last-child {
+  border-bottom: 0 !important;
+}
+[data-theme="premium-dark"] tbody tr:hover {
+  background: rgba(214,168,95,0.035) !important;
+}
+[data-theme="premium-dark"] tbody td {
+  padding: 11px 16px !important;
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.86) !important;
+  vertical-align: middle;
+}
+
+/* Numeric / monetary cells when explicitly marked */
+[data-theme="premium-dark"] tbody td.text-right,
+[data-theme="premium-dark"] tbody td .font-bold {
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+  font-weight: 500 !important;
+  color: #d6a85f !important;
+}
+
+/* Decorative icon tiles inside table cells → quiet gold rim */
+[data-theme="premium-dark"] tbody td .bg-gradient-to-br {
+  background: rgba(214,168,95,0.08) !important;
+  border: 1px solid rgba(214,168,95,0.18) !important;
+  color: #d6a85f !important;
+  box-shadow: none !important;
+}
+[data-theme="premium-dark"] tbody td .bg-gradient-to-br svg {
+  color: #d6a85f !important;
+}
+
+/* Row action icons — bare, restrained */
+[data-theme="premium-dark"] tbody td button {
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  color: rgba(255,255,255,0.5) !important;
+  transform: none !important;
+  border-radius: 6px !important;
+}
+[data-theme="premium-dark"] tbody td button:hover {
+  background: rgba(214,168,95,0.06) !important;
+  border-color: rgba(214,168,95,0.28) !important;
+  color: #d6a85f !important;
+}
+
+/* ============================================================
+   TOOLBARS / FILTER BARS — operational command bar
+   ============================================================ */
+[data-theme="premium-dark"] .border-b.border-white\/\[0\.05\].p-4,
+[data-theme="premium-dark"] .rounded-2xl.border.border-border.bg-card\/60.p-4 {
+  background: linear-gradient(180deg, rgba(18,18,20,0.7), rgba(10,10,11,0.6)) !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(214,168,95,0.10) !important;
+  padding: 12px 16px !important;
+  border-radius: 0 !important;
+}
+[data-theme="premium-dark"] .rounded-2xl.border.border-border.bg-card\/60.p-4 {
+  border-radius: 14px !important;
+  border: 1px solid rgba(214,168,95,0.10) !important;
+}
+
+/* Search input wrapper */
+[data-theme="premium-dark"] .group.flex.flex-1.items-center.gap-2.rounded-xl {
+  background: rgba(8,8,9,0.7) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 8px !important;
+  padding: 7px 12px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+[data-theme="premium-dark"] .group.flex.flex-1.items-center.gap-2.rounded-xl:focus-within {
+  border-color: rgba(214,168,95,0.4) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.02),
+    0 0 0 1px rgba(214,168,95,0.18) !important;
+}
+[data-theme="premium-dark"] .group.flex.flex-1.items-center.gap-2.rounded-xl input::placeholder {
+  color: rgba(255,255,255,0.32) !important;
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+}
+
+/* Generic Input + Select inside premium-dark */
+[data-theme="premium-dark"] input:not([type="checkbox"]):not([type="radio"]),
+[data-theme="premium-dark"] select,
+[data-theme="premium-dark"] textarea {
+  background: rgba(8,8,9,0.7) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  color: rgba(255,255,255,0.9) !important;
+  border-radius: 8px !important;
+  font-size: 13px;
+}
+[data-theme="premium-dark"] input:focus,
+[data-theme="premium-dark"] select:focus,
+[data-theme="premium-dark"] textarea:focus {
+  border-color: rgba(214,168,95,0.4) !important;
+  box-shadow: 0 0 0 1px rgba(214,168,95,0.18) !important;
+  outline: none !important;
+}
+
+/* Toolbar trailing "X registros" text */
+[data-theme="premium-dark"] .text-xs.text-muted-foreground {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 10.5px;
+  color: rgba(255,255,255,0.42) !important;
+}
+
+/* ============================================================
+   BADGES / STATUS — compliance indicators, not SaaS chips
+   ============================================================ */
+[data-theme="premium-dark"] .inline-flex.items-center.gap-1.rounded-full,
+[data-theme="premium-dark"] [class*="rounded-full"][class*="px-2"] {
+  border-radius: 3px !important;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 8px !important;
+  background: rgba(255,255,255,0.04) !important;
+  color: rgba(255,255,255,0.62) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+}
+/* Active / positive */
+[data-theme="premium-dark"] .bg-emerald-500\/10.text-emerald-300,
+[data-theme="premium-dark"] [class*="bg-emerald"] {
+  background: rgba(214,168,95,0.10) !important;
+  color: #d6a85f !important;
+  border-color: rgba(214,168,95,0.24) !important;
+}
+/* Inactive / muted */
+[data-theme="premium-dark"] .bg-zinc-500\/10.text-zinc-400 {
+  background: rgba(255,255,255,0.03) !important;
+  color: rgba(255,255,255,0.42) !important;
+  border-color: rgba(255,255,255,0.06) !important;
+}
+
+/* ============================================================
+   PAGINATION
+   ============================================================ */
+[data-theme="premium-dark"] .border-t.border-border {
+  border-top: 1px solid rgba(214,168,95,0.10) !important;
+  background: rgba(8,8,9,0.5);
+  padding: 10px 16px !important;
+}
+[data-theme="premium-dark"] .border-t.border-border button {
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  color: rgba(255,255,255,0.55) !important;
+  border-radius: 6px !important;
+}
+[data-theme="premium-dark"] .border-t.border-border button:hover:not(:disabled) {
+  border-color: rgba(214,168,95,0.32) !important;
+  color: #d6a85f !important;
+}
+
+/* ============================================================
+   EMPTY STATES — silence + typography
+   ============================================================ */
+[data-theme="premium-dark"] tbody td[colspan] {
+  padding: 56px 16px !important;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  font-size: 11px !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.28) !important;
+  text-align: center;
+}
+[data-theme="premium-dark"] tbody td[colspan] .animate-ping {
+  background: rgba(214,168,95,0.7) !important;
+}
+
+/* ============================================================
+   DIALOGS — institutional matte
+   ============================================================ */
+[data-theme="premium-dark"] [role="dialog"] {
+  background: linear-gradient(180deg, rgba(16,16,18,0.98), rgba(8,8,9,1)) !important;
+  border: 1px solid rgba(214,168,95,0.14) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.03),
+    0 32px 90px -20px rgba(0,0,0,0.9) !important;
+}
+
+/* ============================================================
+   KPI strip inside subpages (Visitantes etc.)
+   StatCard already styled — leave .kpi-card alone, but rein in
+   any stray "stats card" surfaces that use plain card markup.
+   ============================================================ */
+[data-theme="premium-dark"] section.grid [data-slot="card"] {
+  border-radius: 14px !important;
+}
+
+/* =========================================================
+   CYCLE 6 — FINAL PURGE
+   Scope: [data-theme="premium-dark"] ONLY. Blue theme is
+   byte-for-byte preserved. This layer eradicates the last
+   residual blue/cyan/indigo/violet/yellow/rose leaks that
+   slip through hardcoded Tailwind color utilities, inline
+   recharts palettes, and brand-blue tokens used by shared
+   components. Replaces them with the obsidian + gold
+   institutional language.
+   ========================================================= */
+
+/* --- 6.1 Rebind shared brand tokens to executive palette ---
+   The app reuses --brand-blue / --brand-blue-glow / etc. across
+   dashboard chrome, charts, sidebar accents, hero ambience,
+   notifications, CTAs and gradient strokes. Remapping the tokens
+   inside premium-dark instantly purges every consumer without
+   touching component code or impacting Blue.                       */
+[data-theme="premium-dark"] {
+  --brand-blue:        #d6a85f;       /* executive gold */
+  --brand-blue-glow:   #e6c089;       /* warm gold highlight */
+  --brand-green:       #9a8a5e;       /* aged bronze */
+  --brand-green-glow:  #b8a374;       /* bronze highlight */
+  --brand-amber:       #d6a85f;       /* unify into gold */
+  --brand-amber-glow:  #e6c089;
+  --brand-red:         #8a4a3a;       /* restrained ember */
+  --brand-red-glow:    #a8654f;
+
+  --gradient-blue:  linear-gradient(135deg, rgba(214,168,95,0.85), rgba(230,192,137,0.55));
+  --gradient-green: linear-gradient(135deg, rgba(154,138,94,0.75), rgba(184,163,116,0.45));
+  --gradient-amber: linear-gradient(135deg, rgba(214,168,95,0.85), rgba(230,192,137,0.55));
+  --gradient-red:   linear-gradient(135deg, rgba(138,74,58,0.75),  rgba(168,101,79,0.45));
+
+  --shadow-glow-blue:  0 8px 28px -10px rgba(214,168,95,0.45);
+  --shadow-glow-green: 0 8px 28px -10px rgba(184,163,116,0.35);
+  --shadow-glow-amber: 0 8px 28px -10px rgba(214,168,95,0.45);
+  --shadow-glow-red:   0 8px 28px -10px rgba(138,74,58,0.40);
+
+  /* --- 6.1b Primary/ring remap so bg-primary buttons (e.g. "+ Novo Evento",
+     "+ Nova Meta") and primary-tinted surfaces (sidebar active bg-primary/12,
+     border-primary/20) follow the executive gold palette in premium-dark
+     only. Blue theme is untouched. --- */
+  --primary: oklch(0.74 0.13 78);
+  --primary-foreground: oklch(0.16 0.01 80);
+  --ring: oklch(0.74 0.13 78);
+}
+
+
+/* --- 6.2 Hardcoded Tailwind blue utilities → matte gold/ash --- */
+/* Backgrounds */
+[data-theme="premium-dark"] .bg-blue-500,
+[data-theme="premium-dark"] [class*="bg-blue-"],
+[data-theme="premium-dark"] [class*="bg-cyan-"],
+[data-theme="premium-dark"] [class*="bg-sky-"],
+[data-theme="premium-dark"] [class*="bg-indigo-"],
+[data-theme="premium-dark"] [class*="bg-violet-"],
+[data-theme="premium-dark"] [class*="bg-purple-"] {
+  background-color: rgba(214,168,95,0.08) !important;
+}
+[data-theme="premium-dark"] [class*="bg-yellow-"] {
+  background-color: rgba(214,168,95,0.10) !important;
+}
+[data-theme="premium-dark"] [class*="bg-rose-"],
+[data-theme="premium-dark"] [class*="bg-pink-"] {
+  background-color: rgba(138,74,58,0.10) !important;
+}
+
+/* Text */
+[data-theme="premium-dark"] [class*="text-blue-"],
+[data-theme="premium-dark"] [class*="text-cyan-"],
+[data-theme="premium-dark"] [class*="text-sky-"],
+[data-theme="premium-dark"] [class*="text-indigo-"],
+[data-theme="premium-dark"] [class*="text-violet-"],
+[data-theme="premium-dark"] [class*="text-purple-"],
+[data-theme="premium-dark"] [class*="text-yellow-"] {
+  color: #d6a85f !important;
+}
+[data-theme="premium-dark"] [class*="text-rose-"],
+[data-theme="premium-dark"] [class*="text-pink-"] {
+  color: #b8775f !important;
+}
+
+/* Borders */
+[data-theme="premium-dark"] [class*="border-blue-"],
+[data-theme="premium-dark"] [class*="border-cyan-"],
+[data-theme="premium-dark"] [class*="border-sky-"],
+[data-theme="premium-dark"] [class*="border-indigo-"],
+[data-theme="premium-dark"] [class*="border-violet-"],
+[data-theme="premium-dark"] [class*="border-purple-"],
+[data-theme="premium-dark"] [class*="border-yellow-"] {
+  border-color: rgba(214,168,95,0.22) !important;
+}
+[data-theme="premium-dark"] [class*="border-rose-"],
+[data-theme="premium-dark"] [class*="border-pink-"] {
+  border-color: rgba(138,74,58,0.28) !important;
+}
+
+/* Rings + outlines */
+[data-theme="premium-dark"] [class*="ring-blue-"],
+[data-theme="premium-dark"] [class*="ring-cyan-"],
+[data-theme="premium-dark"] [class*="ring-sky-"],
+[data-theme="premium-dark"] [class*="ring-indigo-"],
+[data-theme="premium-dark"] [class*="ring-violet-"],
+[data-theme="premium-dark"] [class*="ring-purple-"] {
+  --tw-ring-color: rgba(214,168,95,0.42) !important;
+  box-shadow: inset 0 0 0 1px rgba(214,168,95,0.42) !important;
+}
+
+/* SVG fill/stroke utilities */
+[data-theme="premium-dark"] [class*="fill-blue-"],
+[data-theme="premium-dark"] [class*="fill-cyan-"],
+[data-theme="premium-dark"] [class*="fill-indigo-"],
+[data-theme="premium-dark"] [class*="stroke-blue-"],
+[data-theme="premium-dark"] [class*="stroke-cyan-"],
+[data-theme="premium-dark"] [class*="stroke-indigo-"] {
+  fill: #d6a85f !important;
+  stroke: #d6a85f !important;
+}
+
+/* Gradient stops (Tailwind from-/via-/to- utilities) */
+[data-theme="premium-dark"] [class*="from-blue-"],
+[data-theme="premium-dark"] [class*="from-cyan-"],
+[data-theme="premium-dark"] [class*="from-sky-"],
+[data-theme="premium-dark"] [class*="from-indigo-"],
+[data-theme="premium-dark"] [class*="from-violet-"],
+[data-theme="premium-dark"] [class*="from-purple-"] {
+  --tw-gradient-from: rgba(214,168,95,0.18) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(214,168,95,0)) !important;
+}
+[data-theme="premium-dark"] [class*="via-blue-"],
+[data-theme="premium-dark"] [class*="via-cyan-"],
+[data-theme="premium-dark"] [class*="via-indigo-"] {
+  --tw-gradient-via: rgba(214,168,95,0.14) !important;
+}
+[data-theme="premium-dark"] [class*="to-blue-"],
+[data-theme="premium-dark"] [class*="to-cyan-"],
+[data-theme="premium-dark"] [class*="to-sky-"],
+[data-theme="premium-dark"] [class*="to-indigo-"],
+[data-theme="premium-dark"] [class*="to-violet-"],
+[data-theme="premium-dark"] [class*="to-purple-"] {
+  --tw-gradient-to: rgba(214,168,95,0.04) !important;
+}
+
+/* Shadows from blue glow utilities */
+[data-theme="premium-dark"] [class*="shadow-[0_0_30px_-18px_rgba(59,130,246"],
+[data-theme="premium-dark"] [class*="shadow-[0_0_20px_-8px_rgba(59,130,246"] {
+  box-shadow: 0 0 28px -16px rgba(214,168,95,0.40) !important;
+}
+
+/* --- 6.3 Recharts: institutional terminal palette ---
+   Forces any chart series (including hardcoded inline fills /
+   strokes set on dataKey series and pie segments) into the
+   restrained obsidian + gold + bronze ledger palette.            */
+[data-theme="premium-dark"] .recharts-surface .recharts-line .recharts-line-curve,
+[data-theme="premium-dark"] .recharts-surface .recharts-area .recharts-area-curve {
+  stroke: #d6a85f !important;
+}
+[data-theme="premium-dark"] .recharts-surface .recharts-line:nth-of-type(2) .recharts-line-curve,
+[data-theme="premium-dark"] .recharts-surface .recharts-area:nth-of-type(2) .recharts-area-curve {
+  stroke: #9a8a5e !important;
+}
+[data-theme="premium-dark"] .recharts-surface .recharts-line:nth-of-type(3) .recharts-line-curve,
+[data-theme="premium-dark"] .recharts-surface .recharts-area:nth-of-type(3) .recharts-area-curve {
+  stroke: rgba(245,240,225,0.55) !important;
+}
+
+[data-theme="premium-dark"] .recharts-dot,
+[data-theme="premium-dark"] .recharts-active-dot {
+  fill: #d6a85f !important;
+  stroke: rgba(10,10,11,0.95) !important;
+}
+
+/* Pie / donut segments — institutional gradient of metals */
+[data-theme="premium-dark"] .recharts-pie-sector path,
+[data-theme="premium-dark"] .recharts-sector {
+  stroke: rgba(10,10,11,0.95) !important;
+}
+[data-theme="premium-dark"] .recharts-pie .recharts-layer:nth-of-type(1) path { fill: #d6a85f !important; }
+[data-theme="premium-dark"] .recharts-pie .recharts-layer:nth-of-type(2) path { fill: #9a8a5e !important; }
+[data-theme="premium-dark"] .recharts-pie .recharts-layer:nth-of-type(3) path { fill: rgba(245,240,225,0.45) !important; }
+[data-theme="premium-dark"] .recharts-pie .recharts-layer:nth-of-type(4) path { fill: rgba(138,74,58,0.70) !important; }
+[data-theme="premium-dark"] .recharts-pie .recharts-layer:nth-of-type(5) path { fill: rgba(214,168,95,0.30) !important; }
+
+/* Bar fills — neutralize defaults to obsidian gold */
+[data-theme="premium-dark"] .recharts-bar-rectangle path,
+[data-theme="premium-dark"] .recharts-rectangle {
+  fill: url(#__premiumDarkBarFill) , #d6a85f;
+  fill-opacity: 0.85 !important;
+}
+
+/* Legend swatches */
+[data-theme="premium-dark"] .recharts-legend-item .recharts-surface {
+  filter: hue-rotate(0deg) saturate(0.2) brightness(1.1);
+}
+
+/* --- 6.4 Progress bars (Goals page) — matte gold ledger fill --- */
+[data-theme="premium-dark"] [role="progressbar"],
+[data-theme="premium-dark"] [data-slot="progress"] {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(214,168,95,0.08) !important;
+  border-radius: 2px !important;
+  height: 6px !important;
+  overflow: hidden;
+}
+[data-theme="premium-dark"] [role="progressbar"] > *,
+[data-theme="premium-dark"] [data-slot="progress-indicator"] {
+  background: linear-gradient(90deg, rgba(214,168,95,0.35), #d6a85f) !important;
+  box-shadow: 0 0 12px rgba(214,168,95,0.25);
+  border-radius: 0 !important;
+}
+
+/* Generic bar-style progress fills (div-based) */
+[data-theme="premium-dark"] .h-2.rounded-full > div,
+[data-theme="premium-dark"] .h-1\.5.rounded-full > div,
+[data-theme="premium-dark"] .h-3.rounded-full > div {
+  background: linear-gradient(90deg, rgba(214,168,95,0.35), #d6a85f) !important;
+  box-shadow: 0 0 10px rgba(214,168,95,0.22);
+}
+
+/* --- 6.5 Events page — operational monitoring console ---
+   The eventos route paints colorful pills via EVENT_COLORS
+   (bg-blue-500/20 + border + text). Already covered by 6.2, but
+   we additionally quiet the calendar today-ring + day-cell hover
+   to read as a console grid rather than a Google-Calendar feed.  */
+[data-theme="premium-dark"] .ring-2.ring-blue-500 {
+  box-shadow: inset 0 0 0 1px rgba(214,168,95,0.55) !important;
+  --tw-ring-color: transparent !important;
+}
+[data-theme="premium-dark"] .ring-blue-500 {
+  --tw-ring-color: rgba(214,168,95,0.55) !important;
+}
+
+/* Event chips: monospaced compliance markers */
+[data-theme="premium-dark"] [class*="bg-blue-500/20"][class*="border-blue-500/40"],
+[data-theme="premium-dark"] [class*="bg-green-500/20"][class*="border-green-500/40"],
+[data-theme="premium-dark"] [class*="bg-yellow-500/20"][class*="border-yellow-500/40"],
+[data-theme="premium-dark"] [class*="bg-red-500/20"][class*="border-red-500/40"] {
+  background: rgba(214,168,95,0.06) !important;
+  border: 1px solid rgba(214,168,95,0.18) !important;
+  color: rgba(245,240,225,0.78) !important;
+  border-radius: 2px !important;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase;
+}
+
+/* --- 6.6 Activity / timeline streams — restrained ledger feed --- */
+[data-theme="premium-dark"] [class*="animate-pulse"][class*="bg-blue"],
+[data-theme="premium-dark"] [class*="animate-ping"][class*="bg-blue"] {
+  background: rgba(214,168,95,0.65) !important;
+}
+
+/* --- 6.7 Status dots & semantic markers ---
+   Generic colored dots/pills that drive activity feeds get
+   subdued to the institutional palette so the feed reads as
+   an operations log, not a startup notification stream.        */
+[data-theme="premium-dark"] .h-2.w-2.rounded-full[class*="bg-blue"],
+[data-theme="premium-dark"] .h-2.w-2.rounded-full[class*="bg-green"],
+[data-theme="premium-dark"] .h-2.w-2.rounded-full[class*="bg-amber"],
+[data-theme="premium-dark"] .h-2.w-2.rounded-full[class*="bg-yellow"] {
+  background: #d6a85f !important;
+  box-shadow: 0 0 6px rgba(214,168,95,0.55);
+}
+
+/* --- 6.8 Tooltips — terminal slate, gold rim --- */
+[data-theme="premium-dark"] [role="tooltip"],
+[data-theme="premium-dark"] [data-slot="tooltip-content"] {
+  background: rgba(8,8,9,0.98) !important;
+  border: 1px solid rgba(214,168,95,0.20) !important;
+  color: rgba(245,240,225,0.90) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7) !important;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+/* --- 6.9 Topbar / header brand swatch (Topbar.tsx + AppSidebar) ---
+   The gradient-to-br from brand-blue → brand-red logo bubble
+   already inherits via 6.1 token remap, but make the brand
+   wordmark itself feel like cast metal, not neon ink.          */
+[data-theme="premium-dark"] [class*="from-[color:var(--brand-blue)]"][class*="to-[color:var(--brand-red)]"] {
+  background: linear-gradient(135deg, #d6a85f 0%, #8a6a3a 100%) !important;
+  color: #0b0b0c !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    0 6px 18px rgba(0,0,0,0.5) !important;
+  text-shadow: none !important;
+}
+
+/* --- 6.10 Hero glow orbs anywhere in app — kill bright blue blur --- */
+[data-theme="premium-dark"] .bg-\[color\:var\(--brand-blue\)\]\/30,
+[data-theme="premium-dark"] .bg-\[color\:var\(--brand-blue\)\]\/20,
+[data-theme="premium-dark"] .bg-\[color\:var\(--brand-blue\)\]\/15,
+[data-theme="premium-dark"] .bg-\[color\:var\(--brand-blue\)\]\/10 {
+  background-color: rgba(214,168,95,0.08) !important;
+}
+
+/* --- 6.11 Notification unread highlight --- */
+[data-theme="premium-dark"] .bg-\[color\:var\(--brand-blue\)\]\/5 {
+  background-color: rgba(214,168,95,0.05) !important;
+}
+
+/* --- 6.12 Selection — gold ink on obsidian --- */
+[data-theme="premium-dark"] ::selection {
+  background: rgba(214,168,95,0.28);
+  color: #f6efdc;
+}
+
+/* --- 6.13 Focus ring fallback for native focus-visible --- */
+[data-theme="premium-dark"] :focus-visible {
+  outline-color: rgba(214,168,95,0.55) !important;
+}
+
+/* =================================================================
+   7. FINAL MICRO-ALIGNMENT PASS
+   Institutional dual-tone hierarchy + tooltip purge + ledger pills.
+   Scope: [data-theme="premium-dark"] only. Blue untouched.
+   ================================================================= */
+
+/* --- 7.1 Chart series dual-tone: Members=Gold, Visitors=Ash ---
+   Forces a clear executive/operational hierarchy.
+   Members (1st series) = executive gold.
+   Visitors (2nd series) = institutional ash / graphite.       */
+[data-theme="premium-dark"] .recharts-surface .recharts-line:nth-of-type(1) .recharts-line-curve,
+[data-theme="premium-dark"] .recharts-surface .recharts-area:nth-of-type(1) .recharts-area-curve {
+  stroke: #d6a85f !important;
+}
+[data-theme="premium-dark"] .recharts-surface .recharts-line:nth-of-type(2) .recharts-line-curve,
+[data-theme="premium-dark"] .recharts-surface .recharts-area:nth-of-type(2) .recharts-area-curve {
+  stroke: rgba(180,184,190,0.62) !important;
+}
+
+/* Line dots match their series tone */
+[data-theme="premium-dark"] .recharts-line:nth-of-type(1) .recharts-dot,
+[data-theme="premium-dark"] .recharts-line:nth-of-type(1) .recharts-active-dot {
+  fill: #d6a85f !important;
+  stroke: rgba(10,10,11,0.95) !important;
+}
+[data-theme="premium-dark"] .recharts-line:nth-of-type(2) .recharts-dot,
+[data-theme="premium-dark"] .recharts-line:nth-of-type(2) .recharts-active-dot {
+  fill: rgba(180,184,190,0.85) !important;
+  stroke: rgba(10,10,11,0.95) !important;
+}
+
+/* Pie / donut — Members vs Visitors split */
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-pie-sector:nth-of-type(1) path,
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-pie .recharts-layer:nth-of-type(1) path {
+  fill: #d6a85f !important;
+}
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-pie-sector:nth-of-type(2) path,
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-pie .recharts-layer:nth-of-type(2) path {
+  fill: rgba(180,184,190,0.55) !important;
+}
+[data-theme="premium-dark"] [data-chart="presence-pie"] .recharts-legend-item:nth-child(2) svg path {
+  fill: rgba(180,184,190,0.75) !important;
+}
+
+/* Bar chart: members (1st bar group) gold, visitors (2nd) ash */
+[data-theme="premium-dark"] .recharts-bar:nth-of-type(1) .recharts-rectangle,
+[data-theme="premium-dark"] .recharts-bar:nth-of-type(1) .recharts-bar-rectangle path {
+  fill: rgba(214,168,95,0.78) !important;
+}
+[data-theme="premium-dark"] .recharts-bar:nth-of-type(2) .recharts-rectangle,
+[data-theme="premium-dark"] .recharts-bar:nth-of-type(2) .recharts-bar-rectangle path {
+  fill: rgba(180,184,190,0.45) !important;
+}
+
+/* --- 7.2 Recharts tooltip — purge blue/green inline series colors,
+   force ledger gold + ash item rows, mono numerics.            */
+[data-theme="premium-dark"] .recharts-default-tooltip,
+[data-theme="premium-dark"] .recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: rgba(8,8,9,0.98) !important;
+  border: 1px solid rgba(214,168,95,0.22) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.75) !important;
+  padding: 10px 12px !important;
+}
+[data-theme="premium-dark"] .recharts-tooltip-label {
+  color: rgba(245,240,225,0.55) !important;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 6px !important;
+}
+[data-theme="premium-dark"] .recharts-tooltip-item-list { padding: 0 !important; margin: 0 !important; }
+[data-theme="premium-dark"] .recharts-tooltip-item {
+  color: rgba(245,240,225,0.88) !important;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.04em !important;
+  padding: 2px 0 !important;
+}
+[data-theme="premium-dark"] .recharts-tooltip-item *,
+[data-theme="premium-dark"] .recharts-tooltip-item .recharts-tooltip-item-name,
+[data-theme="premium-dark"] .recharts-tooltip-item .recharts-tooltip-item-value,
+[data-theme="premium-dark"] .recharts-tooltip-item .recharts-tooltip-item-separator,
+[data-theme="premium-dark"] .recharts-tooltip-item .recharts-tooltip-item-unit {
+  color: rgba(245,240,225,0.88) !important;
+}
+/* Per-item series accent: 1st row gold, 2nd row ash */
+[data-theme="premium-dark"] .recharts-tooltip-item:nth-child(1),
+[data-theme="premium-dark"] .recharts-tooltip-item:nth-child(1) * {
+  color: #d6a85f !important;
+}
+[data-theme="premium-dark"] .recharts-tooltip-item:nth-child(2),
+[data-theme="premium-dark"] .recharts-tooltip-item:nth-child(2) * {
+  color: rgba(190,194,200,0.85) !important;
+}
+[data-theme="premium-dark"] .recharts-tooltip-cursor {
+  stroke: rgba(214,168,95,0.18) !important;
+  fill: rgba(214,168,95,0.04) !important;
+}
+
+/* --- 7.3 Legend dots in JSX (Members=blue/Visitors=green swatches).
+   Force the second swatch (visitors) to ash, while the first
+   continues to inherit gold from the token remap.             */
+[data-theme="premium-dark"] .flex.items-center.gap-1\.5 + .flex.items-center.gap-1\.5 > .bg-\[color\:var\(--brand-green\)\],
+[data-theme="premium-dark"] .flex.items-center.gap-1\.5 + .flex.items-center.gap-1\.5 > .bg-\[color\:var\(--brand-green-glow\)\],
+[data-theme="premium-dark"] span.bg-\[color\:var\(--brand-green\)\].h-2.w-2,
+[data-theme="premium-dark"] span.bg-\[color\:var\(--brand-green-glow\)\].h-2.w-2 {
+  background-color: rgba(190,194,200,0.70) !important;
+}
+
+/* --- 7.4 Upcoming Events card — operational executive schedule.
+   The route paints date pills via bg-[color:var(--brand-blue)]/15
+   + text-[color:var(--brand-blue-glow)]. After token remap they
+   read as gold-on-gold blobs. Restyle as monospaced ledger
+   compliance markers — quiet, dense, institutional.           */
+[data-theme="premium-dark"] .bg-\[color\:var\(--brand-blue\)\]\/15.text-\[color\:var\(--brand-blue-glow\)\],
+[data-theme="premium-dark"] span.shrink-0.rounded-full[class*="brand-blue"] {
+  background: transparent !important;
+  border: 1px solid rgba(214,168,95,0.22) !important;
+  border-radius: 2px !important;
+  padding: 2px 7px !important;
+  color: rgba(214,168,95,0.92) !important;
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+  font-size: 9.5px !important;
+  letter-spacing: 0.10em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+}
+
+/* Upcoming events list items — matte surface, quiet hover */
+[data-theme="premium-dark"] ul.mt-4.space-y-3 > li.rounded-xl.border.border-border {
+  background: rgba(255,255,255,0.015) !important;
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  border-radius: 4px !important;
+  padding: 12px 14px !important;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+[data-theme="premium-dark"] ul.mt-4.space-y-3 > li.rounded-xl.border.border-border:hover {
+  background: rgba(214,168,95,0.025) !important;
+  border-color: rgba(214,168,95,0.18) !important;
+}
+[data-theme="premium-dark"] ul.mt-4.space-y-3 > li p.font-medium {
+  font-weight: 500 !important;
+  letter-spacing: -0.005em !important;
+  color: rgba(245,240,225,0.92) !important;
+}
+[data-theme="premium-dark"] ul.mt-4.space-y-3 > li p.text-xs {
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace !important;
+  font-size: 10.5px !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(245,240,225,0.50) !important;
+}
+
+/* Calendar icon in the Upcoming Events header — dissolve into ash */
+[data-theme="premium-dark"] h3.text-base.font-semibold > svg.text-\[color\:var\(--brand-blue-glow\)\] {
+  color: rgba(214,168,95,0.55) !important;
+}
+
+/* --- 7.5 KPI card primary value — Executive Gold emphasis ---
+   ONLY the dynamic metric value, not eyebrow/metadata.         */
+[data-theme="premium-dark"] .kpi-card span.leading-none.text-\[rgba\(245\,240\,225\,0\.97\)\] {
+  color: #d6a85f !important;
+  text-shadow: 0 0 24px rgba(214,168,95,0.18);
+}
