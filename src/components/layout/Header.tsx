@@ -52,7 +52,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 flex h-16 items-center gap-3 border-b border-white/5 bg-background/70 px-4 backdrop-blur-2xl sm:px-6 xl:px-8">
+    <header className="sticky top-0 z-40 flex h-16 items-center gap-3 border-b border-white/5 bg-background/70 px-4 backdrop-blur-sm sm:px-6 xl:px-8">
       <SidebarTrigger className="text-foreground" />
       <div className="hidden sm:block h-6 w-px bg-border" />
       <div className="min-w-0 flex-1">
@@ -62,7 +62,7 @@ export function Header() {
         </p>
       </div>
 
-      <div className="hidden lg:flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-muted-foreground backdrop-blur-xl w-80">
+      <div className="hidden lg:flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-muted-foreground backdrop-blur-sm w-80">
         <Search className="h-4 w-4" />
         <input
           placeholder="Buscar…"

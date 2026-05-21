@@ -138,7 +138,7 @@ export function AppSidebar() {
   return (
     <Sidebar
       collapsible="icon"
-      className="border-r border-white/5 bg-[#060816]/95 backdrop-blur-2xl"
+      className="border-r border-white/5 bg-[#060816]/95 backdrop-blur-sm"
     >
       <SidebarHeader className="border-b border-sidebar-border">
         <div className="flex items-center gap-3 px-2 py-3">

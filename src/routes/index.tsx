@@ -122,7 +122,7 @@ function Dashboard() {
       <DashboardHero />
 
       {/* Tabs */}
-      <div className="sticky top-0 z-10 flex gap-1 overflow-x-auto rounded-3xl border border-white/10 bg-white/[0.03] p-1.5 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+      <div className="sticky top-0 z-10 flex gap-1 overflow-x-auto rounded-3xl border border-white/10 bg-white/[0.03] p-1.5 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm">
         {tabs.map((t) => {
           const active = view === t.id;
           return (
@@ -178,7 +178,7 @@ function DashboardHero() {
     <motion.div
       {...fadeUp}
       transition={{ duration: 0.4 }}
-      className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-card via-card to-background p-8 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl"
+      className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-card via-card to-background p-8 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm"
     >
       <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-[color:var(--brand-blue)]/30 blur-3xl" />
       <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-[color:var(--brand-red)]/20 blur-3xl" />
@@ -309,7 +309,7 @@ function OverviewView() {
               key={s.title}
               {...fadeUp}
               transition={{ duration: 0.35, delay: i * 0.08 }}
-              className={`relative rounded-2xl ${(s as any).fullRow ? "md:col-span-2" : ""} ${clickable ? "cursor-pointer transition-transform hover:-translate-y-1 hover:shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring" : ""}`}
+              className={`relative rounded-2xl ${(s as any).fullRow ? "md:col-span-2" : ""} ${clickable ? "cursor-pointer transition-transform hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring" : ""}`}
               onClick={clickable ? go : undefined}
               role={clickable ? "button" : undefined}
               tabIndex={clickable ? 0 : undefined}

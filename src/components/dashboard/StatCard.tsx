@@ -50,7 +50,7 @@ export function StatCard(props: StatCardProps) {
 function BlueStatCard({ title, value, delta, icon, variant, format, rightTitle, rightValue, rightFormat }: StatCardProps) {
   return (
     <div
-      className="kpi-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] p-6 text-white backdrop-blur-xl transition-all duration-500 ease-out hover:-translate-y-1"
+      className="kpi-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] p-6 text-white backdrop-blur-sm transition-all duration-500 ease-out hover:-translate-y-1"
       style={{
         backgroundImage: gradients[variant],
         boxShadow: glows[variant],

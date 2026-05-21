@@ -39,7 +39,7 @@ function ResetPasswordPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="relative w-full max-w-md rounded-3xl border border-border bg-card/80 p-8 shadow-[var(--shadow-card)] backdrop-blur-xl"
+        className="relative w-full max-w-md rounded-3xl border border-border bg-card/80 p-8 shadow-[var(--shadow-card)] backdrop-blur-sm"
       >
         <div className="flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[color:var(--brand-blue)] to-[color:var(--brand-red)] text-white">

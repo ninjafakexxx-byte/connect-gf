@@ -70,7 +70,7 @@ function LoginPage() {
         initial={{ opacity: 0, y: 20, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.4 }}
-        className="relative w-full max-w-md rounded-3xl border border-border bg-card/80 p-8 shadow-[var(--shadow-card)] backdrop-blur-xl"
+        className="relative w-full max-w-md rounded-3xl border border-border bg-card/80 p-8 shadow-[var(--shadow-card)] backdrop-blur-sm"
       >
         {mode !== "signin" && (
           <button

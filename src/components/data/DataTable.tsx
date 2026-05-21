@@ -101,7 +101,7 @@ export function DataTable<T extends Record<string, any>>({
   const colCount = columns.length + (showActions ? 1 : 0);
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/[0.06] bg-card/60 backdrop-blur-xl shadow-[var(--shadow-card)]">
+    <div className="overflow-hidden rounded-2xl border border-white/[0.06] bg-card/60 backdrop-blur-sm shadow-[var(--shadow-card)]">
       <div className="flex flex-col gap-3 border-b border-white/[0.05] p-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="group flex flex-1 items-center gap-2 rounded-xl border border-white/[0.05] bg-white/[0.02] px-3 py-2 transition-all duration-200 focus-within:border-white/[0.12] focus-within:bg-white/[0.04] focus-within:shadow-[0_0_0_3px_rgba(56,189,248,0.05)]">
           <Search className="h-4 w-4 text-muted-foreground/70" />

@@ -327,7 +327,7 @@ function MetasPage() {
               key={s.label}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0, transition: { delay: i * 0.05 } }}
-              className="rounded-3xl border border-white/[0.06] bg-white/[0.03] p-4 backdrop-blur-xl shadow-[0_8px_40px_rgba(0,0,0,0.24)] transition-all duration-300 hover:scale-[1.01]"
+              className="rounded-3xl border border-white/[0.06] bg-white/[0.03] p-4 backdrop-blur-sm shadow-[0_8px_40px_rgba(0,0,0,0.24)] transition-all duration-300 hover:scale-[1.01]"
             >
               <div className="flex items-center gap-3">
                 <div

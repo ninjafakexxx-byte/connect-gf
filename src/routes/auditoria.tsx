@@ -96,7 +96,7 @@ function AuditoriaInner() {
       {/* Premium search */}
       <div className="group relative">
         <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-sky-500/5 via-transparent to-violet-500/5 opacity-0 transition-opacity duration-500 group-focus-within:opacity-100" />
-        <div className="relative flex items-center gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 backdrop-blur-xl transition-all duration-300 focus-within:border-white/[0.12] focus-within:bg-white/[0.04] focus-within:shadow-[0_0_0_4px_rgba(56,189,248,0.06)]">
+        <div className="relative flex items-center gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 backdrop-blur-sm transition-all duration-300 focus-within:border-white/[0.12] focus-within:bg-white/[0.04] focus-within:shadow-[0_0_0_4px_rgba(56,189,248,0.06)]">
           <Search className="h-4 w-4 text-muted-foreground/70" />
           <input
             value={query}
@@ -120,7 +120,7 @@ function AuditoriaInner() {
         )}
 
         {!loading && grouped.length === 0 && (
-          <div className="flex flex-col items-center justify-center gap-3 rounded-3xl border border-white/[0.06] bg-white/[0.02] px-6 py-24 text-center backdrop-blur-xl">
+          <div className="flex flex-col items-center justify-center gap-3 rounded-3xl border border-white/[0.06] bg-white/[0.02] px-6 py-24 text-center backdrop-blur-sm">
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/[0.04] ring-1 ring-white/[0.06]">
               <Activity className="h-6 w-6 text-muted-foreground/60" />
             </div>
